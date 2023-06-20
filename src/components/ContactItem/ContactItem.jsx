@@ -6,8 +6,9 @@ export function ContactItem({ name, number, id, onDelete }) {
     <>
       <Item key={id}>
         <div>
-          <Text>{name}: </Text>
-          <Text> {number}</Text>
+          <Text>
+            {name}: {number}
+          </Text>
         </div>
 
         <DeleteBtn type="button" onClick={() => onDelete(id)}>
