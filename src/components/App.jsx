@@ -16,7 +16,9 @@ export class App extends React.Component {
       localStorage.getItem('contacts')
     );
 
-    this.setState({ contacts: contactsFromLocalStorage });
+    if (contactsFromLocalStorage) {
+      this.setState({ contacts: contactsFromLocalStorage });
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
